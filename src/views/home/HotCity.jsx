@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HotCity() {
+export default function HotCity(props) {
   return (
     <div className="city pl-10 pr-10 bg-fff mt-20 pt-20 pb-10">
       <div className="title flex jc-sb aic">
@@ -14,12 +14,13 @@ export default function HotCity() {
       </div>
       <div className="city-list">
         <ul className="flex mt-30 city-content">
-
-
-
-          
-          <li className="list-item" >深圳</li>
-         
+          {props.hotCityList.map((items) => {
+            return (
+              <li key={items.id} className="list-item">
+                {items.name}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
