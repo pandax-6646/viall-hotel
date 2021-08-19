@@ -155,11 +155,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "compilerOptions": {
-    "baseUrl": "src"
-  },
-  "include": [
-    "src"
-  ]
+  }
 }

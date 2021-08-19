@@ -14,14 +14,12 @@ export default function HotCity() {
       </div>
       <div className="city-list">
         <ul className="flex mt-30 city-content">
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
-          <li className="list-item">深圳</li>
+
+
+
+          
+          <li className="list-item" >深圳</li>
+         
         </ul>
       </div>
     </div>
