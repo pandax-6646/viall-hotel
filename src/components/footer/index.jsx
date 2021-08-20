@@ -53,7 +53,7 @@ export default function Footer(props) {
       >
         <img
           className="mt-5"
-          src={`./img/xingqiu${currIndex == " 04" ? "ing" : ""}.png`}
+          src={`./img/xingqiu${currIndex == "04" ? "ing" : ""}.png`}
           alt=""
         />
         <div className="text mt-5 f999">发现</div>
