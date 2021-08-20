@@ -1,25 +1,27 @@
-.footer-container {
-  // 底部导航
-  .nav-box {
-    width: 100%;
-    bottom: 0;
-    .box {
-      margin-top: 5px;
-      cursor: pointer;
-      img {
-        width: 20px;
-      }
-      .text {
-        font-weight: 600;
-        margin-bottom: 3px;
+.target-container {
+  .footer-container {
+    // 底部导航
+    .nav-box {
+      width: 100%;
+      bottom: 0;
+      .box {
+        margin-top: 5px;
+        cursor: pointer;
+        img {
+          width: 20px;
+        }
+        .text {
+          font-weight: 600;
+          margin-bottom: 3px;
+        }
       }
     }
-  }
 
-  // 图标高亮颜色 向其父元素盒子添加
-  .select {
-    .text {
-      color: #fe8100;
+    // 图标高亮颜色 向其父元素盒子添加
+    .select {
+      .text {
+        color: #fe8100;
+      }
     }
   }
 }

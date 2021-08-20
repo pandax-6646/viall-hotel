@@ -7,14 +7,14 @@ import HotRecommend from "./HotRecommend";
 import HotCity from "./HotCity";
 import List from "./List";
 
-import { HomeRequest } from "api/index";
+import { homeRequest } from "api/index";
 import Footer from "components/footer/index";
 
 export default function Home() {
   // 热门推荐
   let [hotRecommendList, setHotRecommendList] = useState([]);
   useEffect(() => {
-    HomeRequest.fetchHotRecommend().then((res) => {
+    homeRequest.fetchHotRecommend().then((res) => {
       setHotRecommendList(res.result);
     });
   }, []);
@@ -22,7 +22,7 @@ export default function Home() {
   // 热门城市
   let [hotCityList, setHotCityList] = useState([]);
   useEffect(() => {
-    HomeRequest.fetchHotCity().then((res) => {
+    homeRequest.fetchHotCity().then((res) => {
       setHotCityList(res.result);
     });
   }, []);
@@ -30,7 +30,7 @@ export default function Home() {
   //  目的地推荐列表
   let [fetchDestinationList, setFetchDestinationList] = useState([]);
   useEffect(() => {
-    HomeRequest.fetchDestination().then((res) => {
+    homeRequest.fetchDestination().then((res) => {
       setFetchDestinationList(res.result);
     });
   }, []);
