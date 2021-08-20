@@ -10,7 +10,7 @@ import List from "./List";
 import { homeRequest } from "api/index";
 import Footer from "components/footer/index";
 
-export default function Home() {
+export default () => {
   // 热门推荐
   let [hotRecommendList, setHotRecommendList] = useState([]);
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Home() {
       {/* 旅游景点列表 */}
       <List fetchDestinationList={fetchDestinationList} />
 
-      <Footer currIndex="01"/>
+      <Footer currIndex="01" />
     </div>
   );
-}
+};

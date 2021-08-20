@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "components/footer/index";
 import { Tabs, WhiteSpace } from "antd-mobile";
 
-export default function Demo() {
+export default () => {
   const tabs = [
     { title: "小区房源", sub: "1" },
     { title: "评论", sub: "2" },
@@ -26,4 +26,4 @@ export default function Demo() {
       <Footer currIndex="06" />
     </div>
   );
-}
+};

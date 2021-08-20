@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import classNames from "classnames";
 
-export default function Footer(props) {
+export default (props) => {
   let { currIndex } = props;
   // 底部导航
   return (
@@ -80,4 +80,4 @@ export default function Footer(props) {
       </Link>
     </div>
   );
-}
+};

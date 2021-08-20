@@ -4,17 +4,17 @@ import request from "./request";
 export const homeRequest = {
   // 热门推荐请求
   fetchHotRecommend() {
-    return request.get("hourse/scene");
+    return request.get("house/scene");
   },
 
   // 热门城市
   fetchHotCity() {
-    return request.get("hourse/city");
+    return request.get("house/city");
   },
 
   // 目的地推荐列表
   fetchDestination() {
-    return request.get("hourse/list");
+    return request.get("house/list");
   },
 };
 
@@ -22,21 +22,21 @@ export const homeRequest = {
 export const targetRequeat = {
   // 房源
   fetchRoom() {
-    return request.get("hourse/list");
+    return request.get("house/list");
   },
 
   // 评论
   fetchComment() {
-    return request.get("hourse/comment");
+    return request.get("house/comment");
   },
 
   // 周边
   fetchPeriphery() {
-    return request.get("hourse/around");
+    return request.get("house/around");
   },
 
   // 介绍
   fetchIntroduce() {
-    return request.get("hourse/introduction");
+    return request.get("house/introduction");
   },
 };

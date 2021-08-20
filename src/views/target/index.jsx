@@ -10,7 +10,7 @@ import Comment from "./Comment"; // 评论
 
 import { targetRequeat } from "api";
 
-export default function Target() {
+export default () => {
   const tabs = [
     { title: "小区房源", sub: "1" },
     { title: "评论", sub: "2" },
@@ -24,21 +24,32 @@ export default function Target() {
     targetRequeat.fetchRoom().then((res) => {
       setRoomList(res.result);
     });
-  },[]);
+  }, []);
+
   // 评论
   let [commentList, setCommentList] = useState([]);
   useEffect(() => {
-
     targetRequeat.fetchComment().then((res) => {
       setCommentList(res.result);
     });
+  }, []);
 
-  }, [])
   // 周边
   let [peripheryList, setPeripheryList] = useState([]);
+  useEffect(() => {
+    targetRequeat.fetchPeriphery().then((res) => {
+      setPeripheryList(res.result);
+    });
+  });
 
   // 介绍
   let [introduceList, setIntroduceList] = useState([]);
+
+  useEffect(() => {
+    targetRequeat.fetchIntroduce().then((res) => {
+      setIntroduceList(res.result);
+    });
+  });
   return (
     <div className="target-container">
       <Tabs
@@ -48,11 +59,10 @@ export default function Target() {
       >
         <Room roomList={roomList} />
         <Comment commentList={commentList} />
-        {/* <Periphery peripheryList={peripheryList} />
-        <Introduce introduceList={introduceList} /> */}
+        <Periphery peripheryList={peripheryList} />
+        <Introduce introduceList={introduceList} />
       </Tabs>
-      <WhiteSpace />
       <Footer currIndex="02" />
     </div>
   );
-}
+};
