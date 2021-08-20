@@ -6,7 +6,7 @@ export default function Discover() {
   return (
     <div>
       <h2>发现页</h2>
-      <Footer />
+      <Footer currIndex="04"/>
     </div>
   );
 }

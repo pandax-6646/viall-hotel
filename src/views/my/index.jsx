@@ -5,7 +5,7 @@ export default function My() {
     <div>
       <h2>我的页</h2>
 
-      <Footer />
+      <Footer currIndex="05"/>
     </div>
   );
 }

@@ -5,7 +5,7 @@ export default function Target() {
     <div>
       <h2>目标页</h2>
 
-      <Footer />
+      <Footer currIndex="02"/>
     </div>
   );
 }

@@ -52,7 +52,7 @@ export default function Home() {
       {/* 旅游景点列表 */}
       <List fetchDestinationList={fetchDestinationList} />
 
-      <Footer />
+      <Footer currIndex="01"/>
     </div>
   );
 }

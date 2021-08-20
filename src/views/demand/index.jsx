@@ -5,7 +5,7 @@ export default function Demand() {
     <div>
       <h2>需求页</h2>
 
-      <Footer />
+      <Footer currIndex="03"/>
     </div>
   );
 }
