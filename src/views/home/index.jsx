@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./index.less";
+import "./index.scss";
 
 import Search from "./Search";
 import Swiper from "./Swiper";

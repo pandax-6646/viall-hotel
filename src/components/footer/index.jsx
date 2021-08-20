@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.less";
+import "./index.scss";
 import { Link } from "react-router-dom";
 
 import classNames from "classnames";
