@@ -1,5 +1,8 @@
 import React from "react";
 
 export default (props) => (
-  <div dangerouslySetInnerHTML={{ __html: props.peripheryList }} />
+  <div
+    className="periphery-container"
+    dangerouslySetInnerHTML={{ __html: props.peripheryList }}
+  />
 );

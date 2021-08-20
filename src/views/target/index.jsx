@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Tabs, WhiteSpace } from "antd-mobile";
+import { Tabs } from "antd-mobile";
 import "./index.scss";
 
 import Footer from "components/footer/index";
@@ -52,11 +52,7 @@ export default () => {
   });
   return (
     <div className="target-container">
-      <Tabs
-        tabs={tabs}
-        initialPage={0}
-        renderTab={(tab) => <span>{tab.title}</span>}
-      >
+      <Tabs tabs={tabs} initialPage={0}>
         <Room roomList={roomList} />
         <Comment commentList={commentList} />
         <Periphery peripheryList={peripheryList} />

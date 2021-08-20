@@ -58,16 +58,15 @@
 
       .img-box {
         padding: 10px;
-        overflow: hidden;
-        // flex-wrap: wrap;
+        overflow-x: auto;
+        position: relative;
         img {
           min-width: 115px;
           max-height: 115px;
-          margin: 0 5px;
+          margin: 0 2px;
         }
 
         span {
-          display: inline-block;
           border-radius: 10px;
           width: 50px;
           line-height: 20px;
@@ -80,6 +79,14 @@
           right: 10%;
         }
       }
+    }
+  }
+  .periphery-container,
+  .introduce-container {
+    margin-bottom: 55px;
+    img {
+      width: 100%;
+      margin-top: 10px;
     }
   }
 }

@@ -15,7 +15,9 @@ export default (props) => (
             }
             alt=""
           />
-          <span className="money abs f16">¥3888起</span>
+          <span className="money abs f16">
+            ¥{(item.minPrice / 100).toFixed(0)}起
+          </span>
         </div>
         <div className="text">
           <h2>{item.name}</h2>
