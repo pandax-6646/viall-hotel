@@ -1,10 +1,11 @@
 import React from "react";
+
 import Footer from "components/footer/index";
-export default function Demand() {
+
+export default function Demo() {
   return (
     <div>
-      <h2>需求页</h2>
-
+      <h2>Demo页</h2>
       <Footer />
     </div>
   );

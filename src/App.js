@@ -5,11 +5,14 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Home from "./views/home/index";
-import Target from "./views/target/index";
-import Dmand from "./views/demand/index";
-import Discover from "./views/discover/index";
-import My from "./views/my/index";
+
+import Home from "views/home/index";
+import Target from "views/target/index";
+import Dmand from "views/demand/index";
+import Discover from "views/discover/index";
+import My from "views/my/index";
+import Demo from "views/demo/index";
+
 export default function App() {
   return (
     <div className="app">
@@ -20,6 +23,7 @@ export default function App() {
           <Route path="/dmand" component={Dmand} />
           <Route path="/discover" component={Discover} />
           <Route path="/my" component={My} />
+          <Route path="/demo" component={Demo} />
 
           {/* 重定向路由，一般放在重定向到的路由的后面 */}
           <Redirect path="/" to="/index" />

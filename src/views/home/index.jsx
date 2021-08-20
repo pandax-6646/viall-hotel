@@ -8,6 +8,7 @@ import HotCity from "./HotCity";
 import List from "./List";
 
 import { HomeRequest } from "api/index";
+import Footer from "components/footer/index";
 
 export default function Home() {
   // 热门推荐
@@ -30,7 +31,6 @@ export default function Home() {
   let [fetchDestinationList, setFetchDestinationList] = useState([]);
   useEffect(() => {
     HomeRequest.fetchDestination().then((res) => {
-      console.log(res);
       setFetchDestinationList(res.result);
     });
   }, []);
@@ -51,6 +51,8 @@ export default function Home() {
 
       {/* 旅游景点列表 */}
       <List fetchDestinationList={fetchDestinationList} />
+
+      <Footer />
     </div>
   );
 }

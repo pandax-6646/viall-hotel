@@ -156,5 +156,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "classnames": "^2.3.1"
   }
 }
