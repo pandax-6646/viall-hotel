@@ -9,7 +9,7 @@ export const actionUpdateCount = (payload) => {
   };
 };
 
-const reducer = (state = initState, action) => {
+export default (state = initState, action) => {
   let { payload, type } = action;
 
   switch (type) {

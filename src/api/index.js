@@ -40,3 +40,16 @@ export const targetRequeat = {
     return request.get("house/introduction");
   },
 };
+
+// 用户页
+export const userRequest = {
+  // 登录
+  fetchLogin(params) {
+    return request.post("user/loginBySmsCode", params);
+  },
+
+  // 获取验证码
+  fetchGetSmsCode(params) {
+    return request.post("user/getSmsCode", params);
+  },
+};
