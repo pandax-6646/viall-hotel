@@ -12,7 +12,6 @@ const Detail = (props) => {
       .getHomeDetail(params)
       .then((res) => {
         setDetail(res.result);
-        console.log(res.result);
       })
       .catch((err) => {
         console.log(err);
@@ -21,6 +20,7 @@ const Detail = (props) => {
 
   return (
     <div className="home-detail">
+      <img className="img" src="../img/service.png" alt="" />
       <div className="head">
         {/* 轮播图 */}
         <div className="head-top">
