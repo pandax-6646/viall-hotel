@@ -1,0 +1,38 @@
+.my-index {
+  .header {
+    background-position: no-repeat center;
+    height: 35vw;
+    .user {
+      height: 80px;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      .photo {
+        width: 80px;
+        border-radius: 50%;
+      }
+      .phone {
+        line-height: 80px;
+      }
+    }
+  }
+  .selection {
+    .item {
+      padding: 15px;
+      .item-r {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .exit {
+    width: 96%;
+    margin: 50px 2% 0;
+    line-height: 2.3;
+    font-size: 16px;
+    background-color: #f5961e;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+}

@@ -11,6 +11,7 @@ import Target from "views/target/index";
 import Dmand from "views/demand/index";
 import Discover from "views/discover/index";
 import My from "views/my/index";
+import Login from "views/login/index";
 import Demo from "views/demo/index";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/dmand" component={Dmand} />
           <Route path="/discover" component={Discover} />
           <Route path="/my" component={My} />
+          <Route path="/login" component={Login} />
           <Route path="/demo" component={Demo} />
 
           {/* 重定向路由，一般放在重定向到的路由的后面 */}
