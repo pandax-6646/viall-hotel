@@ -16,6 +16,10 @@ export const homeRequest = {
   fetchDestination() {
     return request.get("house/list");
   },
+
+  getHomeDetail(params) {
+    return request.get("house/detail", params);
+  },
 };
 
 // 目的地请求

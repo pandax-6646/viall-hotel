@@ -2,8 +2,10 @@ import React from "react";
 import "./index.scss";
 import { userRequest } from "api/index";
 import classNames from "classnames";
+import { useHistory } from "react-router-dom";
 
-function Login() {
+function Login(props) {
+  let history = useHistory();
   let [userInfo, setUserInfo] = React.useState({
     phone: "18720514724",
     smsCode: "",
@@ -34,7 +36,10 @@ function Login() {
     if (!userInfo.smsCode) return;
 
     userRequest.fetchLogin(userInfo).then((res) => {
-      console.log(res.result);
+      let { phone, token } = res.result;
+      props.actionUpdatePhone(phone);
+      props.actionUpdateToken(token);
+      history.push("/my");
     });
   };
   return (

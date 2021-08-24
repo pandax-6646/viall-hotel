@@ -1,9 +1,14 @@
 import React from "react";
-import './index.scss'
+import "./index.scss";
 import Footer from "components/footer/index";
 import { Link } from "react-router-dom";
 const My = (props) => {
-  let logout = () => {};
+
+  // 登出
+  let logout = () => {
+    props.actionUpdatePhone("");
+    props.actionUpdateToken("");
+  };
 
   return (
     <div className="my-index w100pc f16">
@@ -57,4 +62,20 @@ const My = (props) => {
   );
 };
 
-export default My;
+import { actionUpdatePhone, actionUpdateToken } from "reduce/user";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return {
+    phone: state.user.phone,
+    token: state.user.token,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actionUpdatePhone: bindActionCreators(actionUpdatePhone, dispatch),
+    actionUpdateToken: bindActionCreators(actionUpdateToken, dispatch),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(My);
