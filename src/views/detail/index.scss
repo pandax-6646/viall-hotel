@@ -1,0 +1,173 @@
+.home-detail {
+  .img {
+    position: fixed;
+    right: 30px;
+    top: 150px;
+    border-radius: 50%;
+    width: 50px;
+    z-index: 1;
+  }
+
+  // 头部
+  .head {
+    .head-top {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .head-top-price {
+        height: 45px;
+        line-height: 45px;
+        background: rgba(0, 0, 0, 0.65);
+        color: #fff;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        border-radius: 5px;
+
+        p {
+          margin-left: 10px;
+          margin-right: 10px;
+          font-size: 12px;
+
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .head-top-num {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        line-height: 20px;
+        padding: 0 20px;
+        border-radius: 15px;
+        font-size: 16px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+
+        p {
+          bottom: 10px;
+          left: 0;
+          width: 100%;
+        }
+      }
+
+      .head-top-like {
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.65);
+        border-radius: 50px;
+        line-height: 50px;
+        text-align: center;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+
+        img {
+          width: 30px;
+        }
+      }
+
+      .head-top-like:hover {
+        background: #ff8200;
+      }
+    }
+
+    .head-text {
+      height: 75px;
+      background: #fff;
+
+      & > div {
+        padding: 10px;
+      }
+    }
+  }
+
+  //地里位置
+  .address {
+    height: 75px;
+    background: #fff;
+
+    h3 {
+      div {
+        width: 1px;
+        height: 15px;
+        border: 1px solid #ff8200;
+        background: #ff8200;
+      }
+    }
+
+    p {
+      span {
+        img {
+          width: 19px;
+          vertical-align: middle;
+        }
+      }
+
+      .ff8 {
+        color: #ff8200;
+      }
+    }
+  }
+
+  // 详情
+  .detail {
+    background: #fff;
+    padding-bottom: 50px;
+
+    // height: 120px;
+    .detail-top {
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #e0e0e0;
+
+      .active {
+        border-bottom: 1px solid #ff8200;
+      }
+    }
+
+    .detail-text {
+      p {
+        span {
+          color: #ff0000;
+        }
+      }
+    }
+
+    button {
+      // margin-left: 45%;
+      border: 1px solid #ff8200;
+      color: #ff8200;
+      background: #fff;
+      padding: 5px;
+    }
+  }
+
+  // 底部
+  .foot {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+
+    img {
+      vertical-align: middle;
+    }
+
+    .left {
+      border-top: 2px solid #e0e0e0;
+    }
+
+    .right {
+      background: #ff8200;
+      color: #fff;
+      // width: 292px;
+    }
+  }
+}

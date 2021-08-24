@@ -1,15 +1,15 @@
 import axios from "axios";
 
-// # 创建axios 实例
+// 创建axios 实例
 const service = axios.create({
-  // # 配置 baseURL
+  // 配置 baseURL
   baseURL: "http://132.232.87.95:3006/",
 
-  // # 请求超时时间
+  // 请求超时时间
   timeout: 10000,
 });
 
-// # 请求拦截
+//  请求拦截
 service.interceptors.request.use(
   (config) => {
     // # 配置 请求拦截中的 token 是添加 Authorization 还是添加 user-token 取决于后台的设置
@@ -22,7 +22,7 @@ service.interceptors.request.use(
   }
 );
 
-// # 响应拦截
+// 响应拦截
 service.interceptors.response.use(
   (res) => {
     const data = res.data;
@@ -46,7 +46,7 @@ const post = (url, data = {}) => {
   return service.post(url, data);
 };
 
-// # 导出
+// 导出
 export default {
   get,
   post,

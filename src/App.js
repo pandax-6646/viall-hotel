@@ -12,8 +12,8 @@ import Dmand from "views/demand/index";
 import Discover from "views/discover/index";
 import My from "views/my/index";
 import Login from "views/login/index";
+import Detail from "views/detail/index";
 import Demo from "views/demo/index";
-
 
 export default function App() {
   return (
@@ -25,6 +25,7 @@ export default function App() {
           <Route path="/dmand" component={Dmand} />
           <Route path="/discover" component={Discover} />
           <Route path="/my" component={My} />
+          <Route path="/detail/:id" component={Detail} />
           <Route path="/login" component={Login} />
           <Route path="/demo" component={Demo} />
 
