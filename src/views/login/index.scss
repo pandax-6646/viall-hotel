@@ -1,0 +1,72 @@
+.login-index {
+  .content {
+    .login-box {
+      width: 100%;
+    }
+  }
+  input {
+    border: none;
+    outline: none;
+  }
+
+  // 手机号输入框
+  .phone-box {
+    border-bottom: 1px solid #ebebeb;
+    width: 100%;
+    height: 61px;
+    .phone {
+      width: 100%;
+      height: 99.9%;
+    }
+    .clean {
+      width: 24px;
+      height: 24px;
+      right: 4%;
+      border-radius: 50%;
+      color: #fe8100;
+      background-color: #e5e5e5;
+    }
+  }
+
+  // 验证码
+  .prove-box {
+    border-bottom: 1px solid #ebebeb;
+    width: 100%;
+    height: 61px;
+    .code {
+      height: 100%;
+      width: 100%;
+    }
+    .get-code {
+      width: 114px;
+      height: 29px;
+      right: 21px;
+      border-radius: 8px;
+      border-color: transparent;
+      background-color: #fe8100;
+    }
+  }
+
+  // 按钮S
+  .user-control {
+    padding: 17px 0;
+    .control-button {
+      width: 117px;
+      height: 35px;
+      font-weight: 600;
+      border: 1px solid #d3d3d3;
+      border-radius: 8px;
+      background-color: #f8f8f8;
+    }
+    .cancel {
+      color: #000;
+    }
+    .login {
+      color: #bcbcbc;
+      &.select {
+        background-color: #fe8100;
+        color: #fff;
+      }
+    }
+  }
+}

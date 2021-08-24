@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default (props) => (
   <div className="place bg-fff pl-10 pr-10 mt-20 mb-10">
@@ -14,7 +15,11 @@ export default (props) => (
 
     {props.fetchDestinationList.map((item) => {
       return (
-        <div className="place-item pb-10" key={item.id}>
+        <Link
+          to={`/detail/${item.id}`}
+          className="place-item pb-10"
+          key={item.id}
+        >
           <div className="place-list rel">
             <div className="list-item flex">
               <img src={item.imageURL} alt="" />
@@ -34,7 +39,7 @@ export default (props) => (
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       );
     })}
   </div>
