@@ -43,6 +43,8 @@ class Demo extends React.Component {
     };
   }
 
+
+  // 组件渲染后调用
   componentDidMount() {
     setTimeout(() => {
       this.rData = genData();
@@ -53,6 +55,8 @@ class Demo extends React.Component {
     }, 600);
   }
 
+
+  // 上拉触底触发
   onEndReached = (event) => {
     if (this.state.isLoading && !this.state.hasMore) {
       return;
@@ -69,17 +73,7 @@ class Demo extends React.Component {
   };
 
   render() {
-    const separator = (sectionID, rowID) => (
-      <div
-        key={`${sectionID}-${rowID}`}
-        style={{
-          backgroundColor: "#F5F5F9",
-          height: 8,
-          borderTop: "1px solid #ECECED",
-          borderBottom: "1px solid #ECECED",
-        }}
-      />
-    );
+
     let index = data.length - 1;
     const row = (rowData, sectionID, rowID) => {
       if (index < 0) {
@@ -127,20 +121,17 @@ class Demo extends React.Component {
     };
     return (
       <ListView
-        ref={(el) => (this.lv = el)}
         dataSource={this.state.dataSource}
-        renderHeader={() => <span>header</span>}
         renderFooter={() => (
           <div style={{ padding: 30, textAlign: "center" }}>
             {this.state.isLoading ? "Loading..." : "Loaded"}
           </div>
         )}
         renderRow={row}
-        renderSeparator={separator}
         className="am-list"
-        pageSize={4}
+        pageSize={10}
         useBodyScroll
-        
+
         onEndReached={this.onEndReached}
       />
     );
