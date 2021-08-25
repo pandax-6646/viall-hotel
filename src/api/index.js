@@ -41,3 +41,8 @@ export const userRequest = {
   // 获取验证码
   fetchGetSmsCode: (params) => request.post("user/getSmsCode", params),
 };
+
+// 发现页请求
+export const discoverRequest = {
+  fetchDiscoverList: (params) => request.get("discover/list", params),
+};
