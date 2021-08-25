@@ -1,58 +1,17 @@
-import React, { useState, useEffect } from "react";
-import "./index.scss";
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 
-import Search from "./Search";
-import Swiper from "./Swiper";
-import HotRecommend from "./HotRecommend";
-import HotCity from "./HotCity";
-import List from "./List";
-
-import { homeRequest } from "api/index";
-import Footer from "components/footer/index";
+import List from "./list/index";
+import Detail from "./detail/index";
 
 export default () => {
-  // 热门推荐
-  let [hotRecommendList, setHotRecommendList] = useState([]);
-  useEffect(() => {
-    homeRequest.fetchHotRecommend().then((res) => {
-      setHotRecommendList(res.result);
-    });
-  }, []);
-
-  // 热门城市
-  let [hotCityList, setHotCityList] = useState([]);
-  useEffect(() => {
-    homeRequest.fetchHotCity().then((res) => {
-      setHotCityList(res.result);
-    });
-  }, []);
-
-  //  目的地推荐列表
-  let [fetchDestinationList, setFetchDestinationList] = useState([]);
-  useEffect(() => {
-    homeRequest.fetchDestination().then((res) => {
-      setFetchDestinationList(res.result);
-    });
-  }, []);
-
   return (
-    <div className="home-container">
-      {/* 头部导航 */}
-      <Search />
-
-      {/* 首页轮播 */}
-      <Swiper />
-
-      {/* 热门推荐 */}
-      <HotRecommend hotRecommendList={hotRecommendList} />
-
-      {/* 城市列表 */}
-      <HotCity hotCityList={hotCityList} />
-
-      {/* 旅游景点列表 */}
-      <List fetchDestinationList={fetchDestinationList} />
-
-      <Footer currIndex="01" />
+    <div>
+      <Switch>
+        <Route path="/index/list" component={List} />
+        <Route path="/index/detail" component={Detail} />
+        <Redirect path="/index" to="/index/list" />
+      </Switch>
     </div>
   );
 };

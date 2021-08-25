@@ -18,35 +18,23 @@ export const homeRequest = {
 // 目的地请求
 export const targetRequeat = {
   // 房源
-  fetchRoom() {
-    return request.get("house/list");
-  },
+  fetchRoom: () => request.get("house/list"),
 
   // 评论
-  fetchComment() {
-    return request.get("house/comment");
-  },
+  fetchComment: () => request.get("house/comment"),
 
   // 周边
-  fetchPeriphery() {
-    return request.get("house/around");
-  },
+  fetchPeriphery: () => request.get("house/around"),
 
   // 介绍
-  fetchIntroduce() {
-    return request.get("house/introduction");
-  },
+  fetchIntroduce: () => request.get("house/introduction"),
 };
 
 // 用户页
 export const userRequest = {
   // 登录
-  fetchLogin(params) {
-    return request.post("user/loginBySmsCode", params);
-  },
+  fetchLogin: (params) => request.post("user/loginBySmsCode", params),
 
   // 获取验证码
-  fetchGetSmsCode(params) {
-    return request.post("user/getSmsCode", params);
-  },
+  fetchGetSmsCode: (params) => request.post("user/getSmsCode", params),
 };
