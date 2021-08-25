@@ -20,7 +20,6 @@ const Detail = (props) => {
       .getHomeDetail(params)
       .then((res) => {
         setDetail(res.result);
-        console.log(res.result);
       })
       .catch((err) => {
         console.log(err);
@@ -29,9 +28,16 @@ const Detail = (props) => {
 
   // 收藏按钮
   const changeSelect = () => {
-    setIsSelect(!isSelect);
-
-    
+    homeRequest
+      .fetchCollection({ houseId: props.match.params.id })
+      .then((res) => {
+        if (res.code == 666) {
+          setIsSelect(!isSelect);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

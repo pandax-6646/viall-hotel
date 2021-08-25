@@ -1,150 +1,149 @@
-.home-container{
-
-// 头部导航
-.head {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  padding: 5px 0;
-  z-index: 999;
-}
-.head-nav {
-  .logo {
-    width: 100px;
-    height: 18px;
-  }
-  .content {
-    width: 160px;
-    background-color: #ebebeb;
-    border-radius: 30px;
-  }
-  .icon {
-    font-size: 14px;
-  }
-  .hear-search {
-    background-color: #ebebeb;
-    outline: none;
-    border: none;
-    width: 140px;
-
-    font-size: 16px;
-  }
-  .city {
-    margin-left: 20px;
-    font-size: 12px;
-  }
-}
-// 首页轮播
-.swiper {
-  margin-top: 33px;
-  img {
+.home-container {
+  // 头部导航
+  .head {
+    position: fixed;
+    top: 0;
     width: 100%;
+    background-color: #fff;
+    padding: 5px 0;
+    z-index: 999;
   }
-}
-// 热门推荐
-.classify {
-  .title {
-    font-size: 18px;
-  }
-  .classify-content {
-    width: 100%;
-    flex-wrap: wrap;
-    .classify-item {
-      width: 25%;
+  .head-nav {
+    .logo {
+      width: 100px;
+      height: 18px;
     }
-    .photos {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .content {
+      width: 160px;
+      background-color: #ebebeb;
+      border-radius: 30px;
     }
-  }
-  .name {
-    font-size: 14px;
-  }
-}
-// 热门城市
-.city {
-  .title {
-    width: 100%;
-    font-size: 18px;
-  }
-  .icon {
-    font-size: 14px;
-  }
+    .icon {
+      font-size: 14px;
+    }
+    .hear-search {
+      background-color: #ebebeb;
+      outline: none;
+      border: none;
+      width: 140px;
 
-  .city-list {
-    width: 100%;
-    font-size: 18px;
-    .city-content {
-      flex-wrap: wrap;
+      font-size: 16px;
     }
-
-    .list-item {
-      color: black;
-      width: 24%;
-      padding: 10px 0;
-      text-align: center;
-      border: 1px solid #999;
-    }
-    .list-item:nth-child(2n + 1) {
-      border-left: none;
-    }
-    .list-item:nth-child(4n + 4) {
-      border-right: none;
+    .city {
+      margin-left: 20px;
+      font-size: 12px;
     }
   }
-}
-
-// 旅游景点
-
-.place {
-  padding-bottom: 60px;
-  .place-item {
-    border-bottom: 1px solid #ebebeb;
-  }
-  .title {
-    width: 100%;
-    font-size: 18px;
-  }
-  .icon {
-    font-size: 14px;
-  }
-  .list-item {
+  // 首页轮播
+  .swiper {
+    margin-top: 33px;
     img {
       width: 100%;
     }
+    .slider-list {
+      height: 225px !important;
+    }
   }
-  .price {
-    left: 0;
-    bottom: 0;
-    width: 100px;
-    height: 50px;
-    background-color: rgb(20, 41, 29);
-    opacity: 0.6;
-    font-size: 18px;
-
-    span {
+  // 热门推荐
+  .classify {
+    .title {
       font-size: 18px;
     }
-  }
-  .text {
-    font-size: 18px;
-    .title {
-      color: #000;
+    .classify-content {
+      width: 100%;
+      flex-wrap: wrap;
+      .classify-item {
+        width: 25%;
+      }
+      .photos {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
     }
-    .area {
-      width: 110px;
-      background-color: rgb(130, 200, 120);
-      border-radius: 30px;
-      padding: 10px;
-    }
-    .area-icon {
+    .name {
       font-size: 14px;
     }
   }
+  // 热门城市
+  .city {
+    .title {
+      width: 100%;
+      font-size: 18px;
+    }
+    .icon {
+      font-size: 14px;
+    }
+
+    .city-list {
+      width: 100%;
+      font-size: 18px;
+      .city-content {
+        flex-wrap: wrap;
+      }
+
+      .list-item {
+        color: black;
+        width: 24%;
+        padding: 10px 0;
+        text-align: center;
+        border: 1px solid #999;
+      }
+      .list-item:nth-child(2n + 1) {
+        border-left: none;
+      }
+      .list-item:nth-child(4n + 4) {
+        border-right: none;
+      }
+    }
+  }
+
+  // 旅游景点
+
+  .place {
+    padding-bottom: 60px;
+    .place-item {
+      border-bottom: 1px solid #ebebeb;
+    }
+    .title {
+      width: 100%;
+      font-size: 18px;
+    }
+    .icon {
+      font-size: 14px;
+    }
+    .list-item {
+      img {
+        width: 100%;
+      }
+    }
+    .price {
+      left: 0;
+      bottom: 0;
+      width: 100px;
+      height: 50px;
+      background-color: rgb(20, 41, 29);
+      opacity: 0.6;
+      font-size: 18px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+    .text {
+      font-size: 18px;
+      .title {
+        color: #000;
+      }
+      .area {
+        width: 110px;
+        background-color: rgb(130, 200, 120);
+        border-radius: 30px;
+        padding: 10px;
+      }
+      .area-icon {
+        font-size: 14px;
+      }
+    }
+  }
 }
-
-}
-
-

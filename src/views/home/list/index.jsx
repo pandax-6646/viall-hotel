@@ -35,13 +35,25 @@ const My = () => {
     });
   }, []);
 
+  // 轮播图
+  let [swiperImgList, setSwiperImgList] = useState([]);
+  useEffect(() => {
+    homeRequest.fetchDestination().then((res) => {
+      setSwiperImgList(
+        res.result.map((item) => {
+          return item.imageUrl;
+        })
+      );
+    });
+  }, []);
+
   return (
     <div className="home-container">
       {/* 头部导航 */}
       <Search />
 
       {/* 首页轮播 */}
-      <Swiper />
+      <Swiper swiperImgList={swiperImgList} />
 
       {/* 热门推荐 */}
       <HotRecommend hotRecommendList={hotRecommendList} />
