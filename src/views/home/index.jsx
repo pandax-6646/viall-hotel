@@ -10,7 +10,7 @@ export default () => {
       <Switch>
         <Route path="/index/list" component={List} />
         <Route path="/index/detail" component={Detail} />
-        <Redirect path="/index" to="/index/list" />
+        <Redirect path="/" to="/index/list" />
       </Switch>
     </div>
   );

@@ -3,7 +3,7 @@ import "./index.scss";
 import { homeRequest } from "api/index";
 
 const Detail = (props) => {
-  let [detail, setDetail] = React.useState([]);
+  let [detail, setDetail] = React.useState({});
   let params = {
     id: props.match.params.id,
   };

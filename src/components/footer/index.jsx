@@ -8,7 +8,7 @@ export default (props) => {
   let { currIndex } = props;
   // 底部导航
   return (
-    <div className="footer-container nav-box fixed flex jc-sa bg-fff">
+    <div className="footer-container nav-box fixed flex jc-sa f14 bg-fff">
       <Link
         to="/index"
         className={classNames("box flex aic fdc", {
@@ -16,7 +16,7 @@ export default (props) => {
         })}
       >
         <img
-          src={`./img/shouye${currIndex === "01" ? "ing" : ""}.png`}
+          src={`../img/shouye${currIndex === "01" ? "ing" : ""}.png`}
           alt=""
         />
         <div className="text mt-5 f999">首页</div>
@@ -28,7 +28,7 @@ export default (props) => {
         })}
       >
         <img
-          src={`./img/mudedi${currIndex === "02" ? "ing" : ""}.png`}
+          src={`../img/mudedi${currIndex === "02" ? "ing" : ""}.png`}
           alt=""
         />
         <div className="text mt-5 f999">目的地</div>
@@ -39,7 +39,7 @@ export default (props) => {
           select: currIndex == "03",
         })}
       >
-        <img src="./img/tijiao.png" alt="" />
+        <img src="../img/tijiao.png" alt="" />
         <div className="text mt-5 f999">提交需求</div>
       </Link>
       <Link
@@ -50,7 +50,7 @@ export default (props) => {
       >
         <img
           className="mt-5"
-          src={`./img/xingqiu${currIndex == "04" ? "ing" : ""}.png`}
+          src={`../img/xingqiu${currIndex == "04" ? "ing" : ""}.png`}
           alt=""
         />
         <div className="text mt-5 f999">发现</div>
@@ -61,7 +61,7 @@ export default (props) => {
           select: currIndex == "05",
         })}
       >
-        <img src={`./img/wode${currIndex == "05" ? "ing" : ""}.png`} alt="" />
+        <img src={`../img/wode${currIndex == "05" ? "ing" : ""}.png`} alt="" />
         <div className="text mt-5 f999">我的</div>
       </Link>
       <Link
@@ -70,7 +70,7 @@ export default (props) => {
           select: currIndex == "06",
         })}
       >
-        <img src={`./img/wode${currIndex == "06" ? "ing" : ""}.png`} alt="" />
+        <img src={`../img/wode${currIndex == "06" ? "ing" : ""}.png`} alt="" />
         <div className="text mt-5 f999">demo</div>
       </Link>
     </div>

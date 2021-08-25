@@ -1,9 +1,8 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default (props) => (
   <div className="place bg-fff pl-10 pr-10 mt-20 mb-10">
-    {/* {console.log(props)}
     <div className="title flex jc-sb aic pt-10 pb-10">
       <span className="f666 ml-10">
         <strong>目的地推荐</strong>
@@ -42,6 +41,6 @@ export default (props) => (
           </div>
         </Link>
       );
-    })} */}
+    })}
   </div>
 );

@@ -5,7 +5,7 @@ import Search from "./Search";
 import Swiper from "./Swiper";
 import HotRecommend from "./HotRecommend";
 import HotCity from "./HotCity";
-import List from ".";
+import List from "./List";
 
 import { homeRequest } from "api/index";
 import Footer from "components/footer/index";

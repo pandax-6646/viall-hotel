@@ -11,7 +11,7 @@ const My = (props) => {
   };
 
   return (
-    <div className="my-index w100pc f16">
+    <div className="my-container w100pc f16">
       <div
         className="header rel"
         style={{ backgroundImage: "url(img/avtBg.jpg)" }}
