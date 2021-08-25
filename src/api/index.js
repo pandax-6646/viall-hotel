@@ -13,6 +13,9 @@ export const homeRequest = {
 
   // 获取首页详情
   getHomeDetail: (params) => request.get("house/detail", params),
+
+  // 收藏
+  fetchCollection: (params) => request.get("love/change", params),
 };
 
 // 目的地请求

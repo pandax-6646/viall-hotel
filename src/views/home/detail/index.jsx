@@ -1,26 +1,49 @@
 import React from "react";
 import "./index.scss";
 import { homeRequest } from "api/index";
+import { NavBar, Icon } from "antd-mobile";
+import { useHistory } from "react-router-dom";
+import classNames from "classnames";
 
 const Detail = (props) => {
   let [detail, setDetail] = React.useState({});
+  let [isSelect, setIsSelect] = React.useState(false);
+
   let params = {
     id: props.match.params.id,
   };
+  let history = useHistory();
+
+  // 请求详情页的数据
   React.useEffect(() => {
     homeRequest
       .getHomeDetail(params)
       .then((res) => {
         setDetail(res.result);
+        console.log(res.result);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
+  // 收藏按钮
+  const changeSelect = () => {
+    setIsSelect(!isSelect);
+
+    
+  };
+
   return (
     <div className="home-detail">
-      <img className="img" src="../img/service.png" alt="" />
+      <NavBar
+        mode="light"
+        icon={<Icon type="left" />}
+        onLeftClick={() => history.push("/index")}
+      >
+        NavBar
+      </NavBar>
+      <img className="img" src="../../img/service.png" alt="" />
       <div className="head">
         {/* 轮播图 */}
         <div className="head-top">
@@ -28,7 +51,8 @@ const Detail = (props) => {
           {/* 价格 */}
           <div className="head-top-price">
             <p>
-              ￥<span>{(detail.minPrice / 100).toFixed(0)}</span>起 人均:￥348
+              ￥<span>{(detail.minPrice / 100).toFixed(0)}</span>起 人均:￥
+              {detail.village && detail.village.showMinPrice}
             </p>
           </div>
           {/* 轮播图数量指示器 */}
@@ -36,9 +60,11 @@ const Detail = (props) => {
             <p>1/5</p>
           </div>
           {/* 收藏 */}
-          <div className="head-top-like">
-            {/* <img src="./img/like1.png" alt=""> */}
-            <img src="../img/like2.png" alt="" />
+          <div
+            className={classNames("head-top-like", { select: isSelect })}
+            onClick={changeSelect}
+          >
+            <img src="../../img/like2.png" alt="" />
           </div>
         </div>
         {/* 简介 */}
@@ -46,10 +72,10 @@ const Detail = (props) => {
           <div>
             <div className="head-text-top flex">
               <h3 className="f18 mt-10 mr-5">{detail.name}</h3>
-              <img src="../img/detail3.png" alt="" />
+              <img src="../../img/detail3.png" alt="" />
             </div>
             <div className="head-text-center flex jc-sb mt-5">
-              <p className="f18 f999">
+              <p className="f14 f999">
                 {detail.roomNum}室3厅6卫·{detail.acreage}㎡·{detail.bedNum}
                 床·{detail.peopleNum}人
               </p>
@@ -66,7 +92,7 @@ const Detail = (props) => {
         </h3>
         <p className="flex jc-sb">
           <span className="f16">
-            <img src="../img/位置.png" alt="" /> {detail.villageName}
+            <img src="../../img/位置.png" alt="" /> {detail.villageName}
           </span>
           <span className="ff8 f14">查看地图</span>
         </p>
@@ -95,9 +121,9 @@ const Detail = (props) => {
       {/* 底部 */}
       <div className="foot wp-100 flex f18">
         <p className="left pl-10 pr-10">
-          <img src="../img/客服.png" alt="" />
+          <img src="../../img/客服.png" alt="" />
           咨询客服
-          <img src="../img/下.png" alt="" />
+          <img src="../../img/下.png" alt="" />
         </p>
         <p className="right flex fg1 jc-c aic">查看价格•预定</p>
       </div>

@@ -1,4 +1,5 @@
 import axios from "axios";
+import redux from "reduce/index";
 
 // 创建axios 实例
 const service = axios.create({
@@ -12,9 +13,7 @@ const service = axios.create({
 //  请求拦截
 service.interceptors.request.use(
   (config) => {
-    // # 配置 请求拦截中的 token 是添加 Authorization 还是添加 user-token 取决于后台的设置
-    // # config.headers['user-token'] = store.state.user.token;
-    // config.headers.Authorization = store.state.user.token;
+    config.headers["user-token"] = redux.getState().user.token;
     return config;
   },
   (err) => {
