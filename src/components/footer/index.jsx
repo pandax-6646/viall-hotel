@@ -21,7 +21,6 @@ export default (props) => {
         />
         <div className="text mt-5 f999">首页</div>
       </Link>
-
       <Link
         to="/target"
         className={classNames("box flex aic fdc", {
@@ -34,7 +33,6 @@ export default (props) => {
         />
         <div className="text mt-5 f999">目的地</div>
       </Link>
-
       <Link
         to="/dmand"
         className={classNames("box flex aic fdc", {
@@ -44,7 +42,6 @@ export default (props) => {
         <img src="./img/tijiao.png" alt="" />
         <div className="text mt-5 f999">提交需求</div>
       </Link>
-
       <Link
         to="discover"
         className={classNames("box flex aic fdc", {
@@ -58,7 +55,6 @@ export default (props) => {
         />
         <div className="text mt-5 f999">发现</div>
       </Link>
-
       <Link
         to="/my"
         className={classNames("box flex aic fdc", {
@@ -68,7 +64,6 @@ export default (props) => {
         <img src={`./img/wode${currIndex == "05" ? "ing" : ""}.png`} alt="" />
         <div className="text mt-5 f999">我的</div>
       </Link>
-
       <Link
         to="/demo"
         className={classNames("box flex aic fdc", {

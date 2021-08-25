@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import store, { persistor } from "./reduce/index";
 import { PersistGate } from "redux-persist/lib/integration/react";
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
